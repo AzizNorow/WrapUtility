@@ -121,6 +121,10 @@ WrapUtility.ConfigReadString = function(p1, p2, p3)
 	end
 end
 
+function WrapUtility.Extend(p1, p2, p3)
+	return p1 + ((p2 - p1):Normalized():Scaled(p3))
+end
+
 function WrapUtility.DrawTextCenteredX(p1, p2, p3, p4, p5)
 	local wide, tall = Renderer.GetTextSize(p1, p4)
 	return Renderer.DrawText(p1, p2 - wide/2, p3, p4)
