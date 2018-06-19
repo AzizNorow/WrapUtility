@@ -74,6 +74,10 @@ WrapUtility.EIsNPC = function (entity)
 	end
 end
 
+function WrapUtility.GetRadius(p1)
+	return Ability.GetLevelSpecialValueFor(p1, "radius")
+end
+
 
 function WrapUtility.DrawTextCenteredX(p1, p2, p3, p4, p5)
 	local wide, tall = Renderer.GetTextSize(p1, p4)
