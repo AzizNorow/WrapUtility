@@ -78,6 +78,49 @@ function WrapUtility.GetRadius(p1)
 	return Ability.GetLevelSpecialValueFor(p1, "radius")
 end
 
+WrapUtility.ConfigReadString = function(p1, p2, p3)
+	if p3 == nil then
+		local answ = Config.ReadString(p1, p2, "")
+		if answ ~= nil then
+			return answ
+		else
+			return ""
+		end
+	else
+		return Config.ReadString(p1, p2, p3)
+	end
+end
+
+WrapUtility.ConfigReadInt = function(p1, p2, p3)
+	if p3 == nil then
+		local answ = Config.ReadInt(p1, p2, 0)
+		if answ ~= nil then
+			return answ
+		else
+			return 0
+		end
+	else
+		local answ = Config.ReadInt(p1, p2, p3)
+		if answ ~= nil then
+			return answ
+		else
+			return 0
+		end
+	end
+end
+
+WrapUtility.ConfigReadString = function(p1, p2, p3)
+	if p3 == nil then
+		local answ = Config.ReadString(p1, p2, "")
+		if answ ~= nil then
+			return answ
+		else
+			return ""
+		end
+	else
+		return Config.ReadString(p1, p2, p3)
+	end
+end
 
 function WrapUtility.DrawTextCenteredX(p1, p2, p3, p4, p5)
 	local wide, tall = Renderer.GetTextSize(p1, p4)
