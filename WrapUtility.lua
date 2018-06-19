@@ -1,3 +1,3 @@
-local WrapUtility
+local WrapUtility = {}
 
 return WrapUtility
