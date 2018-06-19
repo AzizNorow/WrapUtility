@@ -58,8 +58,7 @@ WrapUtility.TreesInRadius = function (radius, active)
 end
 
 WrapUtility.EIsAlive = function (entity)
-
-	if entity then
+	if entity and entity ~= 0 then
 		return Entity.IsAlive(entity)
 	else
 		return false
@@ -67,7 +66,7 @@ WrapUtility.EIsAlive = function (entity)
 end
 
 WrapUtility.EIsNPC = function (entity)
-	if entity then
+	if entity and entity ~= 0 then
 		return Entity.IsNPC(entity)
 	else
 		return false
