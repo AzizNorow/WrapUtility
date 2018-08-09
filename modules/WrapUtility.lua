@@ -30,7 +30,7 @@ end
 
 
 WrapUtility.HeroesInRadius = function (entity, radius, team)
-	local tbl = Entity.GetHeroesInRadius(entity, radius, team)
+	local tbl = Entity.GetHeroesInRadius(entity,  math.floor(radius), team)
 	if tbl ~= nil then
 			return tbl
 	else
@@ -39,7 +39,7 @@ WrapUtility.HeroesInRadius = function (entity, radius, team)
 end
 
 WrapUtility.UnitsInRadius = function (entity, radius, team)
-	local tbl = Entity.GetUnitsInRadius(entity, radius, team)
+	local tbl = Entity.GetUnitsInRadius(entity,  math.floor(radius), team)
 	if tbl ~= nil then
 
 			return tbl
@@ -49,7 +49,7 @@ WrapUtility.UnitsInRadius = function (entity, radius, team)
 end
 
 WrapUtility.TreesInRadius = function (radius, active)
-	local tbl = Entity.GetTreesInRadius(radius, active)
+	local tbl = Entity.GetTreesInRadius( math.floor(radius), active)
 	if tbl ~= nil then
 		return tbl
 	else
